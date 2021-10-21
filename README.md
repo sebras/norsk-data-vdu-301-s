@@ -15,3 +15,7 @@ intervening padding. Each character is 8 pixels wide and 15 rows tall,
 i.e. one row of pixels per byte for a total of 15 bytes. A bit set to
 `1` should be interpreted as black color while a bit cleared to `0`
 should be interpreted as white color.
+
+This is the output to expect, albeit converted to PNG:
+
+![Image of font for Norsk Data VDU 301 S](https://github.com/sebras/norsk-data-vdu-301-s/blob/master/font.png)
