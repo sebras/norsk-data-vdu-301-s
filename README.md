@@ -6,7 +6,9 @@ To combine the two ROM image halves and extract the font portion of it:
 > python3 extract.py
 
 You should get a `rom.bin` with the complete ROM image and a `font.bin`
-that contains the font part of the ROM.
+that contains the font part of the ROM and finally a `font.ppm` that is
+a [Netpbm image](http://netpbm.sourceforge.net/) showing each character
+of the font.
 
 There are 770 black/white characters in `font.bin` concatenated without
 intervening padding. Each character is 8 pixels wide and 15 rows tall,
