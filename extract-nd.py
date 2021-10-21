@@ -26,7 +26,7 @@ with open('9698H.bin', 'rb') as input0:
 
 
 print('Output complete ROM image.')
-with open('rom.bin', 'wb') as output:
+with open('rom-nd-vdu-301-s.bin', 'wb') as output:
     for i in range(len(rom)):
         output.write(rom[i])
 
@@ -40,7 +40,7 @@ end = offset + chars * bytesperchar
 font = rom[start:end]
 
 print('Output font binary.')
-with open('font.bin', 'wb') as output:
+with open('font-nd-vdu-301-s.bin', 'wb') as output:
     for i in range(len(font)):
         output.write(font[i])
 
@@ -92,7 +92,7 @@ for char in range(chars):
         cy = cy + charheight + padding
 
 print('Output sample image with complete font.')
-with open('font.ppm', 'w') as output:
+with open('font-nd-vdu-301-s.ppm', 'w') as output:
     output.write('P3\n')
     output.write('%u %u\n255\n' % (width, height))
 

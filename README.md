@@ -3,19 +3,24 @@ as [provided at by Torfinn](http://heim.bitraf.no/tingo/nokiad/nokia-vdu-301s.ht
 
 To combine the two ROM image halves and extract the font portion of it:
 
-> python3 extract.py
+> python3 extract-nd.py
+
+You should get a `rom-nd-vdu-301-s.bin` with the complete ROM image and a
+`font-nd-vdu-301-s.bin` that contains the font part of the ROM and finally
+a `font-nd-vdu-301-s.ppm` that is a [Netpbm image](http://netpbm.sourceforge.net/)
+showing each character of the font.
+
+There are 770 black/white characters in `font-nd-vdu-301-s.bin`
+concatenated without intervening padding. Each character is 8 pixels wide
+and 15 rows tall, i.e. one row of pixels per byte for a total of 15 bytes.
+A bit set to `1` should be interpreted as black color while a bit cleared
+to `0` should be interpreted as white color.
 
 You should get a `rom.bin` with the complete ROM image and a `font.bin`
 that contains the font part of the ROM and finally a `font.ppm` that is
 a [Netpbm image](http://netpbm.sourceforge.net/) showing each character
 of the font.
 
-There are 770 black/white characters in `font.bin` concatenated without
-intervening padding. Each character is 8 pixels wide and 15 rows tall,
-i.e. one row of pixels per byte for a total of 15 bytes. A bit set to
-`1` should be interpreted as black color while a bit cleared to `0`
-should be interpreted as white color.
-
 This is the output to expect, albeit converted to PNG:
 
-![Image of font for Norsk Data VDU 301 S](https://github.com/sebras/norsk-data-vdu-301-s/blob/master/font.png)
+![Image of font for Norsk Data VDU 301 S](https://github.com/sebras/norsk-data-vdu-301-s/blob/master/font-nd-vdu-301-s.png)
