@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 
+import sys
 
 print('Read complete ROM image.')
-with open('tdv2200s_U63_D27128A_965115_-1-.bin', 'rb') as f:
+filename = 'tdv2200s_U63_D27128A_965115_-1-.bin'
+if len(sys.argv) > 1:
+    filename = sys.argv[1].replace('\\', '/').split('/')[-1]
+with open(filename, 'rb') as f:
     font = f.read()
 
 
@@ -53,7 +57,7 @@ for char in range(chars):
 
 
 print('Output sample image with complete font.')
-with open('font-tdv-2200-9-s.ppm', 'w') as output:
+with open(f'font-{filename[:-4]}.ppm', 'w') as output:
     output.write('P3\n')
     output.write('%u %u\n255\n' % (width, height))
 
