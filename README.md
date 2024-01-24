@@ -42,3 +42,7 @@ color.
 This is the output to expect for TDV 2200/9 S, albeit converted to PNG:
 
 ![Image of font for Tandberg TDV 2200/9 S](https://github.com/sebras/norsk-data-vdu-301-s/blob/master/font-tdv-2200-9-s.png)
+
+This is the output to expect for ND320, albeit converted to PNG:
+
+![Image of font for Nordsk Data 320](https://github.com/sebras/norsk-data-vdu-301-s/blob/master/font-tdv2200s_965115%20-2-.27128.png)
